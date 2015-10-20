@@ -9,7 +9,7 @@ class TrixEditor(forms.Textarea):
 
         if attrs is None:
             attrs = {}
-        attrs.update({'style': 'display: none;'})
+        attrs.update({'style': 'visibility: hidden; position: absolute;'})
 
         id_attr = attrs.get('id') or '{}_id'.format(name)
         html = super(TrixEditor, self).render(name, value, attrs)
