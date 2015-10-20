@@ -40,7 +40,7 @@ to a form field::
         content = forms.CharField(widget=TrixEditor)
 
 In the template, just use the form as you normally would, but be sure to
-include the associated media:
+include the associated media::
 
     <!doctype html>
     <html lang="en">
