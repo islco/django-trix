@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'trixtest.wsgi.application'
+# WSGI_APPLICATION = 'trixtest.wsgi.application'
 
 
 # Database
