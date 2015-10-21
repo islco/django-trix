@@ -4,8 +4,9 @@ long_description = open('README.rst').read()
 
 setup(
     name="django-trix",
-    version='0.2',
+    version='0.2.1',
     packages=["trix"],
+    include_package_data=True,
     description="Trix rich text editor widget for Django",
     url="https://github.com/istrategylabs/django-trix",
     author="Jeremy Carbaugh",
