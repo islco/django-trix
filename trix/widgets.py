@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 from django import forms
 from django.contrib.admin import widgets as admin_widgets
 from django.utils.html import format_html
+from django.utils.safestring import mark_safe
 
 
 class TrixEditor(forms.Textarea):
@@ -20,7 +21,9 @@ class TrixEditor(forms.Textarea):
 
         html = super(TrixEditor, self).render(name, value, attrs)
         html = format_html(
-            '{}<p><trix-editor {}></trix-editor></p>', html, param_str)
+            '{}<p><trix-editor {}></trix-editor></p>',
+            html,
+            mark_safe(param_str))
         return html
 
     class Media:
