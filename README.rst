@@ -10,8 +10,23 @@ Uses Trix 0.9.
 Using django-trix
 -----------------
 
-django-trix includes both a form widget and a model admin mixin that enables
-the rich text editor.
+django-trix includes a form widget, a model field, and a model admin mixin that
+enables the rich text editor. You can use any of these methods, but you do not
+need to use all.
+
+Model
+~~~~~
+
+To enable the editor in the Django admin (or any form) via the model field, use
+the Trix model field *TrixField* which inherits from
+django.db.models.TextField::
+
+    from django.db import models
+    from trix.fields import TrixField
+
+    class Post(models.Model):
+        content = TrixField('Content')
+
 
 Admin
 ~~~~~
