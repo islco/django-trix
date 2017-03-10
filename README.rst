@@ -4,7 +4,7 @@ django-trix
 
 `Trix rich text editor <http://trix-editor.org>`_ widget for Django.
 
-Uses Trix 0.9.
+Uses Trix 0.10.1.
 
 
 Using django-trix
