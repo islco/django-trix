@@ -2,10 +2,11 @@
 django-trix
 ===========
 
-`Trix rich text editor <http://trix-editor.org>`_ widget for Django.
+`Trix rich text editor <http://trix-editor.org>`_ widget for Django, using Trix 0.10.1.
 
-Uses Trix 0.10.1.
-
+.. image:: https://circleci.com/gh/istrategylabs/django-trix/tree/master.svg?style=shield
+    :target: https://circleci.com/gh/istrategylabs/django-trix/tree/master
+    
 
 Using django-trix
 -----------------
