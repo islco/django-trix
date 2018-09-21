@@ -7,7 +7,7 @@ from django.utils.safestring import mark_safe
 
 class TrixEditor(forms.Textarea):
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None, **kwargs):
 
         if attrs is None:
             attrs = {}
@@ -19,7 +19,7 @@ class TrixEditor(forms.Textarea):
         }
         param_str = ' '.join('{}="{}"'.format(k, v) for k, v in params.items())
 
-        html = super(TrixEditor, self).render(name, value, attrs)
+        html = super(TrixEditor, self).render(name, value, attrs, **kwargs)
         html = format_html(
             '{}<p><trix-editor {}></trix-editor></p>',
             html,
