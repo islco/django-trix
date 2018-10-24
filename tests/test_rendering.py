@@ -1,5 +1,11 @@
+from django.contrib.auth.models import User
+
 
 def test_django_admin(admin_client):
+
+    User.objects.create_superuser('bode', 'bode@example.com', 'cabrito')
+
+    login = admin_client.login(username='bode', password='cabrito')
 
     resp = admin_client.get('/admin/testapp/post/add/')
 
