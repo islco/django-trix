@@ -22,7 +22,7 @@ class TrixEditor(forms.Textarea):
 
         html = super(TrixEditor, self).render(name, value, attrs)
         html = format_html(
-            '{}<p><trix-editor {}></trix-editor></p>',
+            '{}<div style="all:initial"><trix-editor {}></trix-editor></div>',
             html,
             mark_safe(param_str))
         return html
