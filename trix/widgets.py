@@ -1,14 +1,13 @@
 from __future__ import unicode_literals
+
 from django import forms
-from django.contrib.admin import widgets as admin_widgets
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
 
 class TrixEditor(forms.Textarea):
 
-    def render(self, name, value, attrs=None):
-
+    def render(self, name, value, attrs=None, renderer=None):
         if attrs is None:
             attrs = {}
         attrs.update({'style': 'visibility: hidden; position: absolute;'})
