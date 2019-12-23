@@ -3,9 +3,6 @@ django-trix
 ===========
 
 `Trix rich text editor <http://trix-editor.org>`_ widget for Django, using Trix 1.2.2.
-
-.. image:: https://circleci.com/gh/istrategylabs/django-trix/tree/master.svg?style=shield
-    :target: https://circleci.com/gh/istrategylabs/django-trix/tree/master
     
 
 Using django-trix
