@@ -15,3 +15,5 @@ media/
 
 .coverage
 coverage_html_report
+.idea/
+**/__pycache__/**
