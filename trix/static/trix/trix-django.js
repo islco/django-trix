@@ -14,3 +14,13 @@ document.addEventListener('trix-attachment-add', function(ev) {
 
 });
 
+addEventListener('trix-initialize', function(event) {
+  var trixElement = event.target;
+  var id_regex = new RegExp('.*-__prefix__-.*');
+  if (id_regex.test(trixElement.getAttribute('input'))) {
+    var inputElement = trixElement.parentElement.previousElementSibling;
+    if (inputElement) {
+      trixElement.setAttribute('input', inputElement.id);
+    }
+  }
+});
